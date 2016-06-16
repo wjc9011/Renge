@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<!-- main articles -->
+<h2 class="text-right">
+  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+</h2>
+<h4 class="text-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></h4>
+        {% if post.description %}
+            {{ post.description | strip_html | strip_newlines | truncate: 250 }}
+            <p align="right"><a class="btn" href="{{ post.url | prepend: site.baseurl }}">Read more »</a></p>
+        {% else %}
+            {{ post.content | strip_html | strip_newlines | truncate: 250 }}
+            <p align="right"><a class="btn" href="{{ post.url | prepend: site.baseurl }}">Read more »</a></p>
+        {% endif %}
+
+
+<!-- article ends -->
+{% endfor %}
