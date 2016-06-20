@@ -3,21 +3,21 @@ layout: default
 title: Categories
 group: navigation
 ---
-<h3 class="heading text-center">Category</h3>
+<h3 class="heading text-right">Category</h3>
 
 
 {% for category in site.categories %}
-  <h2 id="{{ category[0] }}"><a href="#{{ category[0] }}">{{ category[0] }}</a></h2>
-  <ul>
+  <h2 class="text-right" id="{{ category[0] }}"><a href="#{{ category[0] }}">{{ category[0] }}</a></h2>
+  <ul class="text-right">
     {% assign pages_list = category[1] %}
 
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if group == null or group == node.group %}
           {% if page.url == node.url %}
-          <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
+          <a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a>
           {% else %}
-          <li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
+          <a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
           {% endif %}
         {% endif %}
       {% endif %}
