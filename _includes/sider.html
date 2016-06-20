@@ -1,22 +1,19 @@
 <div class="col-xs-2 span3">
   <ul class="nav nav-list">
-    <hr>
-    <li class="nav-header">Categories</li>
-
+<hr>
+    <li class="nav-header"><big><b>Categories</b></big></li>
       {% for category in site.categories %}
-
         <li><a href="/category/#{{ category[0] }}">{{ category[0] }}</a></li>
-
       {% endfor %}
-
       <hr>
-    <li class="nav-header">Tags</li>
+    <li class="nav-header"><big><b>Tags</b></big></li>
     <br />
     {% for tag in site.tags %}
         <big><a class="label label-info" href="/tags/#{{ tag[0] }}">{{ tag[0] }}</a></big>
     {% endfor %}
     <hr>
-    <!--<li class="nav-header">Links</li>-->
+      <li class="nav-header"><big><b>Links</b></big></li>
+
     <li><a href="https://www.junchaowang.com">Junchao's Blog</a></li>
   </ul>
 </div>

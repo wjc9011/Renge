@@ -4,3 +4,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.v-center {
+    width:1024px;
+}
