@@ -1,24 +1,22 @@
 <div class="col-xs-2 span3">
   <ul class="nav nav-list">
-    <li class="nav-header">Menu</li>
-    <li class="active">
-      <a href="/">Home</a></li>
-    <li>
-      <a href="/about">About</a></li>
+    <hr>
+    <li class="nav-header">Categories</li>
+
+      {% for category in site.categories %}
+
+        <li><a href="/category/#{{ category[0] }}">{{ category[0] }}</a></li>
+
+      {% endfor %}
+
+      <hr>
     <li class="nav-header">Tags</li>
     <br />
-    <a href="#">资料</a>
-    <a href="#">设置</a>
-    <a href="#">帮助</a>
-    <a href="#">资料</a>
-    <a href="#">设置</a>
-    <a href="#">帮助</a>
-    <br />
-    <br />
-    <li class="nav-header">Links</li>
-    <li><a href="#">资料</a></li>
-    <li><a href="#">设置</a></li>
-    <!--<li class="divider"></li>-->
-    <li><a href="#">帮助</a></li>
+    {% for tag in site.tags %}
+        <big><a class="label label-info" href="/tags/#{{ tag[0] }}">{{ tag[0] }}</a></big>
+    {% endfor %}
+    <hr>
+    <!--<li class="nav-header">Links</li>-->
+    <li><a href="https://www.junchaowang.com">Junchao's Blog</a></li>
   </ul>
 </div>

@@ -1,21 +1,29 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Welcome to Jekyll and Thank you for using Renge as your theme.
+
+# Renge is designed by Junchao (www.junchaowang.com) and inspired by amination
+# “のんのんびより” and named by one of the Characters "Renge Miyauchi (宮内 れんげ Miyauchi Renge)".
+# If you have any questions, you can reach me via https://github.com/billyfish152 by submitting
+# an issue or via email billyfish152@gmail.com.
+
+# Please install jekyll-paginate before build it.
+# sudo gem install jekyll-paginate in linux or MacOS.
+# gem install jekyll-paginate in Windows.
+
+# Renge supports categories and tags, which are defined in each of your posts.
+# Also, You can add or removed links in /_includes/sider.html .
+# please change the belowing settings to your own.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Renge
+email: billyfish152@gmail.com
+description: Renge is a Jekyll theme that is designed by Junchao (www.junchaowang.com) and inspired by amination “のんのんびより” and named by one of the Characters "Renge Miyauchi (宮内 れんげ Miyauchi Renge)".
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://www.junchaowang.com" # the base hostname & protocol for your site
+twitter_username:
+github_username:  billyfish152
 
 # Build settings
 markdown: kramdown
+paginate: 3
+gems: [jekyll-paginate]
+paginate_path: "/page/:num"

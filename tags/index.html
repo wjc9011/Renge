@@ -1,0 +1,29 @@
+---
+layout: default
+title: Tags
+group: navigation
+---
+<h3 class="heading text-right">Tags</h3>
+
+
+{% for tag in site.tags %}
+  <h2 class="heading text-right" id="{{ tag[0] }}"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></h2>
+  <ul class="text-right">
+    {% assign pages_list = tag[1] %}
+
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if group == null or group == node.group %}
+          {% if page.url == node.url %}
+          <a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a>
+          {% else %}
+          <a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
+  </ul>
+{% endfor %}
